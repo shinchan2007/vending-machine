@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
 </head>
 <body class="body">
+    <audio src="ping.mp3" id="sound"></audio>
     <!-- header -->
     <div class="header">
         <h1 class="title">CrunchTime</h1>
@@ -26,13 +27,13 @@
             <img src="bingo.webp" alt="bingo"/>
             <h1>BINGO</h1>
             <p>lightly salted taste with a satisfying crunch.</p>
-            <h4>TOTAL STOCK - 10</h4>
+            <h4 id="stock1" value=10>TOTAL STOCK - 10 </h4>
             <div class="count input-group">
-                <button class="btn btn-outline-info">-</button>
-                <input type="text" value="0" style="text-align: center;">
-                <button class="btn btn-outline-info">+</button>
+                <button class="btn btn-outline-info" id="box1minus" onclick="decrement(id)">-</button>
+                <input type="text" value="0" style="text-align: center;" id="box1inp">
+                <button class="btn btn-outline-info" id="box1plus" onclick="increment(id)">+</button>
             </div>
-            <button class="btn btn-outline-info">Buy - <i class="fa fa-inr"> 20</i></button>
+            <button class="btn btn-outline-info" id="buy1" onclick="buyer(id)">Buy - <i class="fa fa-inr"> 20</i></button>
         </div>
 
         <!-- box-2 -->
@@ -42,11 +43,11 @@
             <p>Crunchy, cheesy snacks with a bold, tangy flavor.</p>
             <h4>TOTAL STOCK - 10</h4>
             <div class="count input-group">
-                <button class="btn btn-outline-info">-</button>
-                <input type="text" value="0" style="text-align: center;">
-                <button class="btn btn-outline-info">+</button>
+                <button class="btn btn-outline-info" id="box2minus" onclick="decrement(id)">-</button>
+                <input type="text" value="0" style="text-align: center;" id="box2inp">
+                <button class="btn btn-outline-info" id="box2plus" onclick="increment(id)">+</button>
             </div>
-            <button class="btn btn-outline-info">Buy - <i class="fa fa-inr"> 10</i></button>
+            <button class="btn btn-outline-info" id="buy2" onclick="buyer(id)">Buy - <i class="fa fa-inr"> 10</i></button>
         </div>
 
         <!-- box-3 -->
@@ -56,11 +57,11 @@
         <p>Spicy, tangy, and irresistibly crunchy with bold flavors!</p>
         <h4>TOTAL STOCK - 10</h4>
         <div class="count input-group">
-            <button class="btn btn-outline-info">-</button>
-            <input type="text" value="0" style="text-align: center;">
-            <button class="btn btn-outline-info">+</button>
+            <button class="btn btn-outline-info" id="box3minus" onclick="decrement(id)">-</button>
+            <input type="text" value="0" style="text-align: center;" id="box3inp">
+            <button class="btn btn-outline-info" id="box3plus" onclick="increment(id)">+</button>
         </div>
-        <button class="btn btn-outline-info">Buy - <i class="fa fa-inr"> 25</i></button>
+        <button class="btn btn-outline-info" id="buy3" onclick="buyer(id)">Buy - <i class="fa fa-inr"> 25</i></button>
     </div>
 </div>
 
@@ -76,11 +77,11 @@
             <p>Extra crispy, crunchy snack with a bold, savory flavor.</p>
             <h4>TOTAL STOCK - 10</h4>
             <div class="count input-group">
-                <button class="btn btn-outline-info">-</button>
-                <input type="text" value="0" style="text-align: center;">
-                <button class="btn btn-outline-info">+</button>
+                <button class="btn btn-outline-info" id="box4minus" onclick="decrement(id)">-</button>
+                <input type="text" value="0" style="text-align: center;" id="box4inp">
+                <button class="btn btn-outline-info" id="box4plus" onclick="increment(id)">+</button>
             </div>
-            <button class="btn btn-outline-info">Buy - <i class="fa fa-inr"> 20</i></button>
+            <button class="btn btn-outline-info" id="buy4" onclick="buyer(id)">Buy - <i class="fa fa-inr"> 20</i></button>
         </div>
 
         <!-- box-5 -->
@@ -90,11 +91,11 @@
             <p>Crunchy, chocolatey, with a delightful wafer inside!</p>
             <h4>TOTAL STOCK - 10</h4>
             <div class="count input-group">
-                <button class="btn btn-outline-info">-</button>
-                <input type="text" value="0" style="text-align: center;">
-                <button class="btn btn-outline-info">+</button>
+                <button class="btn btn-outline-info" id="box5minus" onclick="decrement(id)">-</button>
+                <input type="text" value="0" style="text-align: center;" id="box5inp">
+                <button class="btn btn-outline-info" id="box5plus" onclick="increment(id)">+</button>
             </div>
-            <button class="btn btn-outline-info">Buy - <i class="fa fa-inr"> 20</i></button>
+            <button class="btn btn-outline-info" id="buy5" onclick="buyer(id)">Buy - <i class="fa fa-inr"> 20</i></button>
         </div>
 
         <!-- box-6 -->
@@ -104,11 +105,11 @@
             <p>Sweet, creamy white chocolate with rich flavor.</p>
             <h4>TOTAL STOCK - 10</h4>
             <div class="count input-group">
-                <button class="btn btn-outline-info">-</button>
-                <input type="text" value="0" style="text-align: center;">
-                <button class="btn btn-outline-info">+</button>
+                <button class="btn btn-outline-info" id="box6minus" onclick="decrement(id)">-</button>
+                <input type="text" value="0" style="text-align: center;" id="box6inp">
+                <button class="btn btn-outline-info" id="box6plus" onclick="increment(id)">+</button>
             </div>
-            <button class="btn btn-outline-info">Buy - <i class="fa fa-inr"> 25</i></button>
+            <button class="btn btn-outline-info" id="buy6" onclick="buyer(id)">Buy - <i class="fa fa-inr"> 25</i></button>
         </div>
     </div>
 <!-------------------------------------------------------------------------------------------------------------->
@@ -122,11 +123,11 @@
             <p>Sweet, creamy, fruity, with a crunchy biscuit bite!</p>
             <h4>TOTAL STOCK - 10</h4>
             <div class="count input-group">
-                <button class="btn btn-outline-info">-</button>
-                <input type="text" value="0" style="text-align: center;">
-                <button class="btn btn-outline-info">+</button>
+                <button class="btn btn-outline-info" id="box7minus" onclick="decrement(id)">-</button>
+                <input type="text" value="0" style="text-align: center;" id="box7inp">
+                <button class="btn btn-outline-info" id="box7plus" onclick="increment(id)">+</button>
             </div>
-            <button class="btn btn-outline-info">Buy - <i class="fa fa-inr"> 10</i></button>
+            <button class="btn btn-outline-info" id="buy7" onclick="buyer(id)">Buy - <i class="fa fa-inr"> 10</i></button>
         </div>
 
         <!-- box-8 -->
@@ -136,11 +137,11 @@
             <p>Extra crispy, crunchy snack with a bold, savory flavor.</p>
             <h4>TOTAL STOCK - 10</h4>
             <div class="count input-group">
-                <button class="btn btn-outline-info">-</button>
-                <input type="text" value="0" style="text-align: center;">
-                <button class="btn btn-outline-info">+</button>
+                <button class="btn btn-outline-info" id="box8minus" onclick="decrement(id)">-</button>
+                <input type="text" value="0" style="text-align: center;" id="box8inp">
+                <button class="btn btn-outline-info" id="box8plus" onclick="increment(id)">+</button>
             </div>
-            <button class="btn btn-outline-info">Buy - <i class="fa fa-inr"> 30</i></button>
+            <button class="btn btn-outline-info" id="buy8" onclick="buyer(id)">Buy - <i class="fa fa-inr"> 30</i></button>
         </div>
 
         <!-- box-9 -->
@@ -150,11 +151,11 @@
             <p>Crisp chocolate cookies with a creamy, sweet filling.</p>
             <h4>TOTAL STOCK - 10</h4>
             <div class="count input-group">
-                <button class="btn btn-outline-info">-</button>
-                <input type="text" value="0" style="text-align: center;">
-                <button class="btn btn-outline-info">+</button>
+                <button class="btn btn-outline-info" id="box9minus" onclick="decrement(id)">-</button>
+                <input type="text" value="0" style="text-align: center;" id="box9inp">
+                <button class="btn btn-outline-info" id="box9plus" onclick="increment(id)">+</button>
             </div>
-            <button class="btn btn-outline-info">Buy - <i class="fa fa-inr"> 10</i></button>
+            <button class="btn btn-outline-info" id="buy9" onclick="buyer(id)">Buy - <i class="fa fa-inr"> 10</i></button>
         </div>
     </div>
 
@@ -169,11 +170,11 @@
             <p>Sweet, fizzy cola with a refreshing, bold taste.</p>
             <h4>TOTAL STOCK - 10</h4>
             <div class="count input-group">
-                <button class="btn btn-outline-info">-</button>
-                <input type="text" value="0" style="text-align: center;">
-                <button class="btn btn-outline-info">+</button>
+                <button class="btn btn-outline-info" id="box10minus" onclick="decrement(id)">-</button>
+                <input type="text" value="0" style="text-align: center;" id="box10inp">
+                <button class="btn btn-outline-info" id="box10plus" onclick="increment(id)">+</button>
             </div>
-            <button class="btn btn-outline-info">Buy - <i class="fa fa-inr"> 40</i></button>
+            <button class="btn btn-outline-info" id="buy10" onclick="buyer(id)">Buy - <i class="fa fa-inr"> 40</i></button>
         </div> 
 
         <!-- box-11 -->
@@ -183,11 +184,11 @@
             <p>Crisp, refreshing drink with a sweet, fizzy kick.</p>
             <h4>TOTAL STOCK - 10</h4>
             <div class="count input-group">
-                <button class="btn btn-outline-info">-</button>
-                <input type="text" value="0" style="text-align: center;">
-                <button class="btn btn-outline-info">+</button>
+                <button class="btn btn-outline-info" id="box11minus" onclick="decrement(id)">-</button>
+                <input type="text" value="0" style="text-align: center;" id="box11inp">
+                <button class="btn btn-outline-info" id="box11plus" onclick="increment(id)">+</button>
             </div>
-            <button class="btn btn-outline-info">Buy - <i class="fa fa-inr"> 50</i></button>
+            <button class="btn btn-outline-info" id="buy11" onclick="buyer(id)">Buy - <i class="fa fa-inr"> 50</i></button>
         </div>
 
         <!-- box-12 -->
@@ -197,11 +198,11 @@
             <p>Crisp, lemony-lime, refreshing, with a fizzy kick!</p>
             <h4>TOTAL STOCK - 10</h4>
             <div class="count input-group">
-                <button class="btn btn-outline-info">-</button>
-                <input type="text" value="0" style="text-align: center;">
-                <button class="btn btn-outline-info">+</button>
+                <button class="btn btn-outline-info" id="box12minus" onclick=decrement(id)>-</button>
+                <input type="text" value="0" style="text-align: center;" id="box12inp">
+                <button class="btn btn-outline-info" id="box12plus" onclick="increment(id)">+</button>
             </div>
-            <button class="btn btn-outline-info">Buy - <i class="fa fa-inr"> 35</i></button>
+            <button class="btn btn-outline-info" id="buy12" onclick="buyer(id)">Buy - <i class="fa fa-inr"> 35</i></button>
         </div>
     </div>
 

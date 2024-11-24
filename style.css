@@ -20,6 +20,7 @@
 }
 .logo{
    scale:0.3;
+   z-index: -5;
 }
 .contentline{
     width:100vw;
@@ -166,7 +167,7 @@ inherits: false;
 }
     .box{
     background-color:rgb(255, 255, 255,) !important;
-    width:fit-content;
+    width:100%;
     scale: 0.8;
     }
     .box::after,.box::before{
@@ -192,62 +193,7 @@ inherits: false;
         display: none;
     }
 
-}/*
-  @media  (min-width:459px) and(max-width:599px){
-    .box h1{
-        font-size: 80px;
-    }
-    .box p{
-        font-size: 30px;
-    }
-    .box h4{
-        font-size: 40px;
-    }
-    .box button{
-        font-size: 20px;
-    }
-    .box input{
-        font-size: 20px;
-    }
-    .body{
-        width:fit-content;
-        margin: 1rem 0rem;
 }
-    .contentline{
-    flex-wrap: wrap;
-    margin-top: 0;
-    margin-bottom: 0;
-    
-}
-    .box{
-    background-color:rgb(255, 255, 255,) !important;
-    width:fit-content;
-    scale: 0.8;
-    }
-    .box::after,.box::before{
-    background-color:rgb(255, 255, 255,) !important;
-    }
-    .header{
-        margin:0 1rem;
-    }
-    .header h1{
-        width: fit-content;
-        scale:0.9
-    }
-    .header img{
-        display: none !important;
-    }
-    .discount{
-        scale: 0.9;
-    }
-    .payment{
-        scale: 0.9;
-    }
-    .box::after,.box::before{
-        display: none;
-    }
-
-  } */
   /* Tablets and small devices (600px to 768px) */
   @media all and (min-width: 600px) and (max-width: 768px) {
     .box h1{
@@ -266,7 +212,7 @@ inherits: false;
         font-size: 20px;
     }
     .body{
-        width:fit-content;
+        width:100%;
         margin: 1rem 0rem;
 }
     .contentline{
@@ -277,7 +223,7 @@ inherits: false;
 }
     .box{
     background-color:rgb(255, 255, 255,) !important;
-    width:fit-content;
+    width:100%;
     scale: 0.8;
     }
     .box::after,.box::before{
@@ -323,7 +269,7 @@ inherits: false;
         font-size: 20px;
     }
     .body{
-        width:fit-content;
+        width:100%;
         margin: 1rem 0rem;
 }
     .contentline{
@@ -334,7 +280,7 @@ inherits: false;
 }
     .box{
     background-color:rgb(255, 255, 255,) !important;
-    width:fit-content;
+    width:100%;
     scale: 0.8;
     }
     .box::after,.box::before{
@@ -360,48 +306,6 @@ inherits: false;
         display: none;
     }
   }
-  
-  /* Small laptops and desktops (1024px to 1280px) */
-  /* @media all and (min-width: 1025px) and (max-width: 1280px) {
-    /* .body{
-        width:fit-content;
-        margin: 1rem 0rem;
-}
-    .contentline{
-    flex-wrap: wrap;
-    margin-top: 0;
-    margin-bottom: 0;
-    
-}
-    .box{
-    background-color:rgb(255, 255, 255,) !important;
-    width:fit-content;
-    scale: 0.8;
-    }
-    .box::after,.box::before{
-    background-color:rgb(255, 255, 255,) !important;
-    }
-    .header{
-        margin:0 1rem;
-    }
-    .header h1{
-        width: fit-content;
-        scale:0.9
-    }
-    .header img{
-        display: none !important;
-    }
-    .discount{
-        scale: 0.9;
-    }
-    .payment{
-        scale: 0.9;
-    }
-    .box::after,.box::before{
-        display: none;
-    } */
-  /* } */
-  
   /* Medium to large desktops (1280px to 1440px) */
   @media all and (min-width: 1281px) and (max-width: 1318px) {
     .box h4{
