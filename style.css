@@ -1,0 +1,290 @@
+*{
+    user-select: none;
+    
+}
+.body{
+    margin:2rem 3rem;
+    overflow-x: hidden;
+}
+.header{
+    height:20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    text-shadow: 0px 0px 7px black;
+    color: orange;
+    font-family: "Modak", system-ui;
+    font-size: 3rem; 
+}
+.logo{
+   scale:0.3;
+}
+.contentline{
+    width:100vw;
+    display: flex;
+    flex-basis: 33%;
+    justify-content: start;
+    gap:15vw;
+    margin-bottom: 2rem;
+    overflow: visible;
+    position: relative;
+    
+}
+.box{
+    background-color: aliceblue;
+    display: flex;
+    width:20%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    position: relative;
+    border:2px solid transparent;
+    border-width: 0.2rem;
+    position: relative;
+    box-shadow: 0px 2px 15px 3px rgb(0, 238, 255);
+}
+@property --angle{
+syntax: "<angle>";
+initial-value: 0deg;
+inherits: false;
+}
+.box::after,.box::before{
+    content: "";
+    position: absolute;
+    top: -10px;                 
+    bottom: -10px;             
+    left: -10px;                
+    right: -10px;               
+    background-image:conic-gradient(from var(--angle),transparent 70%,rgb(179, 249, 28) ,rgb(7, 245, 74));
+    z-index: -1;
+    border-radius: 10px;
+    animation: spin 3s linear infinite;
+}
+.box::before{
+    filter:blur(7rem);
+}
+@keyframes spin{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
+.box img{
+    position: relative;
+    width:100%;
+    scale:0.7;
+    border-width: 0.23rem;
+    box-shadow: 0px 2px 15px 3px rgb(0, 238, 255);
+}
+.box button{
+    width:100%; 
+
+}
+.count{
+    display: flex;
+    flex-basis: 20% 40% 20%;
+    justify-content: center;
+    height:fit-content;
+    margin: 1rem;
+}
+.count button{
+    width:15%;
+    height: fit-content;
+    padding:0.3rem;
+    box-shadow: 2px 0px 15px 3px rgb(0, 238, 255);
+    
+}
+.count input{
+    width:20%;
+    border-color: aliceblue;
+}
+.count input:active{
+    border-color: rgb(0, 238, 255);
+}
+.discount{
+    border: 1px solid rgb(0, 238, 255);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 0px 15px 3px rgb(0, 238, 255);
+}
+.form-control{
+    border-radius: 1rem;
+
+}
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+.payment{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width:100%;
+}
+.payment button{
+    box-shadow: 0px 0px 50px  rgb(0, 238, 255);
+}
+
+/* 
+<!--------------------------------------------------------------------------------------------------------------> */
+/* Mobile devices (small screens: 320px to 600px) */
+
+@media all and (min-width: 320px) and (max-width: 600px) {
+    .body{
+        width:fit-content;
+        margin: 1rem 0rem;
+}
+    .contentline{
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+    .box{
+    background-color:rgb(255, 255, 255,) !important;
+    width:fit-content;
+    scale: 0.8;
+    }
+    .box::after,.box::before{
+    background-color:rgb(255, 255, 255,) !important;
+    }
+    .header{
+        margin:0 1rem;
+    }
+    .header h1{
+        width: fit-content;
+        scale:0.9
+    }
+    .header img{
+        display: none !important;
+    }
+
+
+}
+  
+  /* Tablets and small devices (600px to 768px) */
+  @media all and (min-width: 600px) and (max-width: 768px) {
+    .body{
+        width:fit-content;
+        margin: 1rem 0rem;
+}
+    .contentline{
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+    .box{
+    background-color:rgb(255, 255, 255,) !important;
+    width:fit-content;
+    scale: 0.8;
+    }
+    .box::after,.box::before{
+    background-color:rgb(255, 255, 255,) !important;
+    }
+    .header{
+        margin:0 1rem;
+    }
+    .header h1{
+        width: fit-content;
+        scale:0.9
+    }
+    .header img{
+        display: none !important;
+    }
+
+
+  }
+  
+  /* Tablets and larger small laptops (768px to 1024px) */
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    .body{
+        width:fit-content;
+        margin: 1rem 0rem;
+}
+    .contentline{
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+    .box{
+    background-color:rgb(255, 255, 255,) !important;
+    width:fit-content;
+    scale: 0.8;
+    }
+    .box::after,.box::before{
+    background-color:rgb(255, 255, 255,) !important;
+    }
+    .header{
+        margin:0 1rem;
+    }
+    .header h1{
+        width: fit-content;
+        scale:0.9
+    }
+    .header img{
+        display: none !important;
+    }
+    .discount{
+        scale: 0.9;
+    }
+    .payment{
+        scale: 0.9;
+    }
+  }
+  
+  /* Small laptops and desktops (1024px to 1280px) */
+  @media all and (min-width: 1025px) and (max-width: 1280px) {
+    .body{
+        width:fit-content;
+        margin: 1rem 0rem;
+}
+    .contentline{
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+    .box{
+    background-color:rgb(255, 255, 255,) !important;
+    width:fit-content;
+    scale: 0.8;
+    }
+    .box::after,.box::before{
+    background-color:rgb(255, 255, 255,) !important;
+    }
+    .header{
+        margin:0 1rem;
+    }
+    .header h1{
+        width: fit-content;
+        scale:0.9
+    }
+    .header img{
+        display: none !important;
+    }
+    .discount{
+        scale: 0.9;
+    }
+    .payment{
+        scale: 0.9;
+    }
+  }
+  
+  /* Medium to large desktops (1280px to 1440px) */
+  @media all and (min-width: 1281px) and (max-width: 1318px) {
+    .box h4{
+        font-size:20px;
+    }
+  }
