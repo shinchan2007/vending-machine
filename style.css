@@ -321,3 +321,13 @@ inherits: false;
         
 }
   }
+.conclusion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow:2px 0px 15px 3px rgb(0, 238, 255) !important ;
+}
+.filler{
+    height: 10vh;
+    width: 100%;
+}
